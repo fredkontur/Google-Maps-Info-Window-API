@@ -8,14 +8,12 @@ var ggMap = {
 
 function infoImg(url) {
     this.url = url;
-    this.top = false;
     this.width = 300;
     this.order = 3;
 }
 
 function infoTxt(txt) {
     this.txt = txt;
-    this.top = true;
     this.order = 1;
 }
 
