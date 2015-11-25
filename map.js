@@ -73,12 +73,11 @@ function createInfoBox(passedLoc) {
 }
 
 function envelope() {
-    var mapCenter = ggMap.center || locations[0];
-    initMap(mapCenter.address, ggMap.zoom);
-    
-    for(var i = 0; i < locations.length; i++)
-        createInfoBox(locations[i]);
+    var mapCenter = ggMap_xyz_9753.center || locs_xyz_9753[0];
+    initMap(mapCenter.address, ggMap_xyz_9753.zoom);
+    for(var i = 0; i < locs_xyz_9753.length; i++)
+        createInfoBox(locs_xyz_9753[i]);
 }
 
-if(ggMap.loadMap)
+if(ggMap_xyz_9753.loadMap)
     google.maps.event.addDomListener(window, 'load', envelope());
