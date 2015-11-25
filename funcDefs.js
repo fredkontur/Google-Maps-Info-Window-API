@@ -1,5 +1,6 @@
+var geocoder = new google.maps.Geocoder();
+
 function initMap(address, zoom) {
-    var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': address}, function(results, status) {
         var loc = results[0].geometry.location;
         map = new google.maps.Map(document.getElementById('map'), {
@@ -10,7 +11,6 @@ function initMap(address, zoom) {
 }
 
 function createInfoBox(passedLoc) {
-    var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': passedLoc.address}, function(results, status) {
         var locCoords = results[0].geometry.location;
         var markerTitle = passedLoc.address;
