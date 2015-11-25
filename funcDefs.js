@@ -25,12 +25,12 @@ function createInfoBox(passedLoc) {
         var contentStrArr = [];
         var contentStr = "<div class='infoBox'>";
         if(passedLoc.infoBox.infoTxt.txt) {
-            var txtStr = "<div class='infoText'><p>" + passedLoc.infoBox.infoTxt.txt + "</p></div>";
+            var txtStr = "<div class='infoTxt'><p>" + passedLoc.infoBox.infoTxt.txt + "</p></div>";
             var txtObj = {content: txtStr, order: passedLoc.infoBox.infoTxt.order};
             contentStrArr.push(txtObj);
         }
         if(passedLoc.infoBox.infoMore.url) {
-            var moreStr = "<div class='infoLink'><p><a href='" + passedLoc.infoBox.infoMore.url + "'";
+            var moreStr = "<div class='infoMore'><p><a href='" + passedLoc.infoBox.infoMore.url + "'";
             if(passedLoc.infoBox.infoMore.newWindow)
                 moreStr = moreStr + " target='_blank'";
             moreStr = moreStr + ">" + passedLoc.infoBox.infoMore.txt + "</a></p></div>";

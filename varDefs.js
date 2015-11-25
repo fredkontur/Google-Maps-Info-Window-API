@@ -6,27 +6,27 @@ var ggMap = {
     loadMap: true
 }
 
-function infoImg(url) {
-    this.url = url;
+function infoImg() {
+    this.url = undefined;
     this.width = 300;
     this.order = 3;
 }
 
-function infoTxt(txt) {
-    this.txt = txt;
+function infoTxt() {
+    this.txt = undefined;
     this.order = 1;
 }
 
-function infoMore(url) {
-    this.url = url;
+function infoMore() {
+    this.url = undefined;
     this.txt = "More information";
     this.newWindow = true;
     this.order = 2;
 }
 
-function infoBox(address, infoTitle) {
-    this.markerLabel = address;
-    this.infoTitle = infoTitle;
+function infoBox() {
+    this.markerLabel = undefined;
+    this.infoTitle = undefined;
     this.infoImg = new infoImg;
     this.infoTxt = new infoTxt;
     this.infoMore = new infoMore;
@@ -41,7 +41,6 @@ function loc(address) {
 }
 
 function del(loc) {
-    var newLocations = locations.filter(function(e) {return e != loc});
-    locations = newLocations.slice();
+    locations = locations.filter(function(e) {return e != loc});
     delete loc;
 }
