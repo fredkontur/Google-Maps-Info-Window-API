@@ -8,6 +8,30 @@ var ggMap_xyz_9753 = {
     loadMap: true
 }
 
+function setMapCenter(center) {
+    ggMap_xyz_9753.center = center;
+}
+
+function getMapCenter() {
+    return ggMap_xyz_9753.center;
+}
+
+function setMapZoom(zoom) {
+    ggMap_xyz_9753.zoom = zoom;
+}
+
+function getMapZoom(zoom) {
+    return ggMap_xyz_9753.zoom;
+}
+
+function setLoadMap(loadMap) {
+    ggMap_xyz_9753.loadMap = loadMap;
+}
+
+function getLoadMap() {
+    return ggMap_xyz_9753.loadMap;
+}
+
 function infoImg_xyz_9753(url) {
     this.url = url;
     this.width = 300;
