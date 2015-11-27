@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions - Map Display</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href ="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Functions - Map Display</h2>
+                
+                <p>The map functions determine the overall look of the map and whether or not the map gets displayed. All parameters associated with the map have default values, and do not need to be set by the user.</p>
+                
+                <table class="table-bordered">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>setMapCenter(center: location-object)</td>
+                        <td><b>Return:</b> None<br>This function sets the location of the center of the map. Setting the value of the map center is optional. If no value is chosen, the default value is the first location created by the user.</td>
+                    </tr>
+                    <tr>
+                        <td>setMapZoom(zoom: number)</td>
+                        <td><b>Return:</b> None<br>This function sets the zoom of the map. The higher the zoom value, the more zoomed in the map will be. The zoom value ranges from 0 to about 20 (the maximum value depends on the location being viewed). Setting the value of the zoom is optional. If no value is chosen, the default value is 5.</td>
+                    </tr>
+                        <td>setLoadMap(loadMap: boolean)</td>
+                        <td><b>Return:</b> None<br>This function determines if the map will be loaded and displayed. Passing it a value of true means that the map will be loaded and displayed. Setting the value of loadMap is optional. If no value is chosen, the default value is true.</td>
+                    </tr>
+                    </tr>
+                        <td>getMapCenter()</td>
+                        <td><b>Return:</b> location-object<br>This function returns the current location that is the center of the map.</td>
+                    </tr>
+                    </tr>
+                        <td>getMapZoom()</td>
+                        <td><b>Return:</b> number<br>This function returns the current value of the map's zoom.</td>
+                    </tr>
+                    </tr>
+                        <td>getLoadMap()</td>
+                        <td><b>Return:</b> boolean<br>This function returns the current value of the loadMap property.</td>
+                    </tr>
+                </table>
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li class="active"><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

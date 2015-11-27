@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions - Descriptive Text</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href ="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Functions - Descriptive Text</h2>
+                
+                <p>Below is a list of the functions that can be used to create, delete, or edit the descriptive text in the location's info window. The order property for the descriptive text has not been described previously. The entry for the <code><i>location</i>.setTxt()</code> function gives a full description of the order property.</p>
+                
+                <table class="table-bordered">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setTxt(text: string, [order: number])</td>
+                        <td><b>Return:</b> None<br>This function sets the text field of the location's info window. It is not required for the user to set the descriptive text. If no descriptive text is chosen, then the field will not appear in the info window. The text parameter is a string representing the descriptive text. The optional order parameter determines where the text will appear relative to the other elements in the info window. The lower the order number, the higher the element will appear in the info window. The order parameter is optional for this function. If the user does not choose a value for the descriptive text's order parameter, then, by default, its value is 1, which means that the descriptive text will be the first value to appear after the title in the info window. By default, if there is a title, it always appears at the top of the info window. If the order value was previously set, it will not be affected by this function unless the order parameter is included in the function call.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setTxtOrder(order: number)</td>
+                        <td><b>Return:</b> None<br>This function sets the order of appearance of the descriptive text in the location's info window.</td>
+                    </tr>
+                        <td><i>location</i>.getTxt()</td>
+                        <td><b>Return:</b> string<br>This function returns the current descriptive text for the location's info window.</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                        <td><i>location</i>.getTxtOrder()</td>
+                        <td><b>Return:</b> number<br>This function returns the current order of appearance value for the descriptive text.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.delTxt()</td>
+                        <td><b>Return:</b> None<br>This function deletes the current descriptive text from the location's info window.</td>
+                    </tr>
+                </table>
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li class="active"><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Introduction</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Introduction</h2>
+                
+                <p>The Google Maps Info Window API makes it simple for web programmers to add info windows to locations on a Google Map. Info windows are windows that pop up when a user clicks on a location marker on a Google Map. These windows can contain any typical html element including text, images, and links.</p>
+                
+                <p>Although the Google Maps API provides the capability for creating info windows, it is a rather arduous process to go from a location address, e.g., Toronto, Canada, and associated text, e.g., “Toronto is a beautiful city and is the home of the Maple Leafs and the Blue Jays”, to an info window on a Google Map. This API allows programmers to skip most of those arduous steps. For the Toronto example, the creation of the info window is reduced to 2 straightforward lines of code.</p>
+                
+                <p><pre class="prettyprint">
+var toronto = addLoc("Toronto, Canada");
+toronto.setTxt("Toronto is a beautiful city and is the home of the Maple Leafs and the Blue Jays");</pre></p>
+            
+                <p>This API could be useful for any number of people and applications – creating an online travel scrapbook, posting the locations and career highlights of former students on an alumni website, displaying an annotated map of famous battlefields for a history of war class, etc.</p> 
+
+                <ul class="pagination">
+                    <li class="active"><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

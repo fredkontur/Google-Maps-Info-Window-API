@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions - More Info Link</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href ="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Functions - More Info Link</h2>
+                
+                <p>Below is a list of the functions that can be used to create, delete, or edit the link to more information in the location's info window.</p>
+                
+                <table class="table-bordered">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setInfoLink(url: string, [text: string], [order: number], [new-window: boolean])</td>
+                        <td><b>Return:</b> None<br>This function sets the more info link field of the location's info window. It is not required for the user to set the more info link. If no link is chosen, then the field will not appear in the info window. The url parameter is a string representing the URL for the link. The optional text parameter determines the text that will appear for the link. If no text is chosen, then the default text is "More information". A complete description of the optional order parameter can be found in the <a href="descriptive-text.html" target="_blank">entry</a> for the <code><i>location</i>.setTxt()</code> function. If no value is chosen for the order parameter, then the default value is 2, which means that the more info link will appear after the title and the descriptive text in the info window. The optional new-window parameter determines if a new window will open when the link is clicked. If new-window is true, then a new window will open when the link is clicked. If a value is not chosen for new-window, then the default value is true. If a value was previously chosen for any of the optional parameters, then that value will be unchanged by this function unless a new value for the parameter is passed in the function call.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setInfoLinkTxt(text: string)</td>
+                        <td><b>Return:</b> None<br>This function sets the text for the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setInfoLinkOrder(order: number)</td>
+                        <td><b>Return:</b> None<br>This function sets the order of appearance of the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setInfoLinkNew(new-window: boolean)</td>
+                        <td><b>Return:</b> None<br>This function sets the value of the new-window boolean for the more info link.</td>
+                    </tr>
+                 <tr>
+                        <td><i>location</i>.getInfoLinkUrl()</td>
+                        <td><b>Return:</b> string<br>This function returns the current URL for the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getInfoLinkTxt()</td>
+                        <td><b>Return:</b> string<br>This function returns the current text for the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getInfoLinkOrder()</td>
+                        <td><b>Return:</b> number<br>This function returns the current order of appearance for the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getInfoLinkNew()</td>
+                        <td><b>Return:</b> boolean<br>This function returns the current value of the new-window boolean for the more info link in the location's info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.delInfoLink()</td>
+                        <td><b>Return:</b> None<br>This function deletes the current more info link from the location's info window.</td>
+                    </tr>
+                </table>
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li class="active"><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

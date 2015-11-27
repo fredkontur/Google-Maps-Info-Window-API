@@ -122,6 +122,6 @@ function addLoc(address, title, txt, moreUrl, imgUrl) {
 }
 
 function delLoc(loc) {
-    locs_xyz_9753 = locs_xyz_9753.filter(function(e) {return e != loc});
+    locs_xyz_9753 = locs_xyz_9753.filter(function(e) { return e != loc; });
     delete loc;
 }

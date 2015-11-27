@@ -1,0 +1,12 @@
+.prettyprint {
+    text-indent: 25px;
+}
+
+td, th {
+    border: 1px solid;
+    padding: .5em;
+}
+
+th {
+    background-color: lightcyan;
+}

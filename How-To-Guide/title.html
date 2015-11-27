@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions - Info Window Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href ="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Functions - Info Window Title</h2>
+                
+                <p>There are three functions related to the info window title - set, get, and delete. These functions are methods of the location object prototype.</p>
+                
+                <table class="table-bordered">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setTitle(title: string)</td>
+                        <td><b>Return:</b> None<br>This function sets the title field of the location's info window. It is not required for the user to set the title. If no title is chosen, then the field will not appear in the info window. If a title is chosen, then, by default, it will appear at the top of the info window.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getTitle()</td>
+                        <td><b>Return:</b> string<br>This function returns the current value of the location's info window title.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.delTitle()</td>
+                        <td><b>Return:</b> None<br>This function deletes the current title from the location's info window.</td>
+                    </tr>
+                </table>
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li class="active"><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

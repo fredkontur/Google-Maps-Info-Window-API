@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions - Location</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topics.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Functions - Location</h2>
+                
+                <p>The 7 functions described in this section are the location creation function, the functions that set and return the location's address, the functions that set and return the location's marker label, and the functions that set and return the value for the maximum width of the location's info window. The functions that are used to create, edit, and delete the contents of the info window are described in later sections.</p>
+                
+                <table class="table-bordered">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>addLoc(location-address: string, [title: string], [descriptive-text: string], [more-info-url: string], [image-url: string])</td>
+                        <td><b>Return:</b> location-object<br>This function creates a new location. The only required parameter is the address of the location, entered as a string.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setAddress(location-address: string)</td>
+                        <td><b>Return:</b> None<br>This function sets the address of a location object.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setMarkerLabel(label: string)</td>
+                        <td><b>Return:</b> None<br>This function sets the value of the location's marker label. The marker label is a small text box that appears when the mouse hovers over the location marker. It is not required for the user to set this value. If it is not set, the value defaults to the address given by the user for the location.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.setMaxWidth(width: number)</td>
+                        <td><b>Return:</b> None<br>This function sets the value of the maximum width of the location's info window in pixels. It is not required for the user to set this value. If it is not set, the value defaults to 325 pixels.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getAddress()</td>
+                        <td><b>Return:</b> string<br>This function returns the address of a location object.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getMarkerLabel()</td>
+                        <td><b>Return:</b> string<br>This function returns the current marker label for a location object.</td>
+                    </tr>
+                    <tr>
+                        <td><i>location</i>.getMaxWidth()</td>
+                        <td><b>Return:</b> number<br>This function returns the current value, in pixels, of the maximum width of the location's info window.</td>
+                    </tr>
+                </table>
+
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li class="active"><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

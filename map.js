@@ -20,7 +20,6 @@ function initMap(address, zoom, locations) {
 }
 
 function createInfoBox(passedLoc, geocoder) {
-    //var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': passedLoc.address}, function(results, status) {
         if(results[0]) {
             var locCoords = results[0].geometry.location;

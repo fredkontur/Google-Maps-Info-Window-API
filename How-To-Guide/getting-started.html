@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting Started</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <style type="text/css">
+        #map { height: 600px; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Getting Started</h2>
+                
+                <p>You can get started using the Google Maps Info Window API by copying and pasting the following text into an HTML editor.</p>
+                
+                <p><pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        html, body { height: 100%; }
+        #map { height: 100%; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;https://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;https://rawgit.com/fredkontur/Google-Maps-Info-Window-API/master/locations.js&quot;&gt;&lt;/script&gt;
+      &lt;script&gt;
+          // Your code here
+      &lt;/script&gt;
+      &lt;script src=&quot;https://rawgit.com/fredkontur/Google-Maps-Info-Window-API/master/map.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></p>
+            
+                <p>There are several important things to note in the code above.</p>
+
+                <ol>
+                <li>You need to have a div with id=”map” in order to have a place on the web page for the Google Map.</li>
+                <li>The styles in the document header define the height of the map div to be 100%. You can change that, but you cannot delete the height definition from the styles because the default height of the div is 0%. </li>
+                <li>The calls to the JavaScript files need to be in the order listed. Otherwise, the function and variable definitions will occur after they are used in the code and/or the map object will load before the contents of the info windows are passed to it.</li>
+                </ol>
+
+                <p>If you try to run this HTML file as it is, you’ll get a blank page. That’s because you need to enter code in the spot where it says “Your code here”. In that spot, put the following code.</p>
+
+                <p><pre class="prettyprint">              var chTitle = "Chicago - A Great Place to Visit!";
+              var chDesc = "Make sure to stop by Chicago every chance you get and explore all of the great sites! " +
+                  "This city has the best pizza!";
+              var moreChInfo = "https://en.wikipedia.org/wiki/Chicago";
+              var chImg = "http://www.fodors.com/world/images/destinations/4224/chicago.jpg";
+              var chicago = addLoc("Chicago, IL", chTitle, chDesc, moreChInfo, chImg);</pre></p>
+
+                <p>After pasting that code, save the HTML file and try opening it in a browser. You should see a web page with a marker on Chicago. If you click on that marker, an info window will open up with a title, some descriptive text, a link, and an image. The map itself should have much of the functionality of a regular Google Map, with zooming and dragging capabilities.</p>
+
+                <p>Although we only created one location for this example, you can create as many locations as you like. So, for example, you can add these lines to your code.</p>
+
+                <p><pre class="prettyprint">              var pikesPeak = addLoc("Pikes Peak, CO"); // Create the location and set its properties afterwards
+              pikesPeak.setTitle("Pikes Peak");
+              pikesPeak.setImg("http://www.summitleaders.org/wp-content/uploads/2012/01/Pikes-Peak-900x435.jpg");
+
+              var parthenon = addLoc("Parthenon, Greece", "Parthenon"); // Create the location and info window title
+              parthenon.setTxt("The Parthenon is an ancient temple in Athens, Greece."); // Now provide the descriptive text</pre></p>
+
+                <p>After adding the above code, save the file again and open the page. You'll need to zoom out to see Greece, but all three places – Chicago, Pikes Peak, and the Parthenon – should be marked on the Google Map with info windows that pop up when you click on their markers. You can see an example of this map on the bottom of the page.</p>
+
+                <p>If you’d like to look at the non-Google source files, you can find them <a href="https://github.com/fredkontur/Google-Maps-Info-Window-API" target="_blank">here</a>.</p>
+
+                <div id="map"></div>
+
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li class="active"><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://rawgit.com/fredkontur/Google-Maps-Info-Window-API/master/locations.js"></script>
+    <script>
+        var chTitle = "Chicago - A Great Place to Visit!";
+        var chDesc = "Make sure to stop by Chicago every chance you get and explore all of the great sites! " +
+                "This city has the best pizza!";
+        var moreChInfo = "https://en.wikipedia.org/wiki/Chicago";
+        var chImg = "http://www.fodors.com/world/images/destinations/4224/chicago.jpg";
+        var chicago = addLoc("Chicago, IL", chTitle, chDesc, moreChInfo, chImg);
+
+        var pikesPeak = addLoc("Pikes Peak, CO"); // Create the location and set its properties afterwards
+        pikesPeak.setTitle("Pikes Peak");
+        pikesPeak.setImg("http://www.summitleaders.org/wp-content/uploads/2012/01/Pikes-Peak-900x435.jpg");	
+
+        var parthenon = addLoc("Parthenon, Greece", "Parthenon"); //Create the location and info window title
+        parthenon.setTxt("The Parthenon is an ancient temple in Athens, Greece."); // Now provide the description
+    </script>
+    <script src="https://rawgit.com/fredkontur/Google-Maps-Info-Window-API/master/map.js"></script>
+</body>
+</html>

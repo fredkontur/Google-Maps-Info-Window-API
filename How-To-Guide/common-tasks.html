@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Performing Common Tasks</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Performing Common Tasks</h2>
+                
+                <p>The main thing that needs to be done to make an info window is to create a location on the Google Map for the info window. In order to create a location, use the following command.</p>
+                
+                <p><code>var <i>location</i> = addLoc(<i>location-address</i>)</code></p>
+                
+                <p>The <code>addLoc()</code> function returns a location object. The location address parameter is a string representing any address that can be recognized by Google Maps. It can be something very specific like a street address or something more general like a city (e.g., “Fresno, CA”) or even a country (e.g., “Peru”).</p>
+                
+                <p>The Google Maps Info Window API allows you to put four different content fields in the info window.</p>
+                
+                <ol>
+                    <li>Title</li>
+                    <li>Descriptive Text</li>
+                    <li>Link for More Information</li>
+                    <li>Image</li>
+                </ol>
+            
+                <p>All of the fields are optional, and you are allowed to put any combination of the four fields in the info window. If you don’t assign any content to the info window for a location that you have created, an empty info window will pop up when the location marker is clicked.</p>
+                
+                <p>There are two different ways to add content to the info window. If the content fields have been defined when the location is created, you can pass the fields to the <code>addLoc()</code> function.</p>
+                    
+                <p><code>var <i>location</i> = addLoc(<i>location-address</i>, <i>title</i>, <i>descriptive-text</i>, <i>more-info-url</i>, <i>image-url</i>)</code></p>
+                    
+                <p>All parameters are passed as strings, and the parameters must be passed to the function in the order listed above. However, you can leave off any number of the parameters at the end of the list. For example, if you don’t wish to pass an image or a link for more information to <code>addLoc()</code>, then you can make the call to the function by leaving out the last two parameters.</p>
+                
+                <p>Another way to populate the info window content is to use the set methods for the fields. Below is the syntax for the set methods. Note that all of them are methods of the location object prototype and take a string as their parameter.</p>
+                
+                <ol>
+                    <li><code><i>location</i>.setTitle(<i>title</i>)</code></li>
+                    <li><code><i>location</i>.setTxt(<i>descriptive-text</i>)</code></li>
+                    <li><code><i>location</i>.setInfoLink(<i>more-info-url</i>)</code></li>
+                    <li><code><i>location</i>.setImg(<i>image-url</i>)</code></li>
+                </ol>
+                
+                <p>The next 6 sections will discuss these methods in more detail along with the other functions that can be used in the API.</p>
+                    
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li class="active"><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

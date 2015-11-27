@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Topic - Validating Input</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="getting-started.html">Getting Started</a>
+                </li>
+                <li>
+                    <a href="common-tasks.html">Performing Common Tasks</a>
+                </li>
+                <li>
+                    <a href="map-display.html">Functions - Map Display</a>
+                </li>
+                <li>
+                    <a href="location.html">Functions - Location</a>
+                </li>
+                <li>
+                    <a href="title.html">Functions - Info Window Title</a>
+                </li>
+                <li>
+                    <a href="descriptive-text.html">Functions - Descriptive Text</a>
+                </li>
+                <li>
+                    <a href="info-link.html">Functions - More Info Link</a>
+                </li>
+                <li>
+                    <a href="image.html">Functions - Info Window Image</a>
+                </li>
+                <li>
+                    <a href="style-selectors.html">Info Window Style Selectors</a>
+                </li>
+                <li>
+                    <a href="advanced-topic.html">Advanced Topic - Validating Input</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div><h1>How-To Guide for Google Maps Info Window API</h1></div>
+                <h2>Advanced Topic - Validating Input</h2>
+                
+                <p>You may be concerned about what happens when an invalid address is passed to the Google Maps Info Window API. The default behavior of the API is to not mark a location that has an invalid address while marking all other valid locations that are passed to the API as usual. For cases where multiple locations are identified for a passed address (as would likely happen if the user entered a common city name, like Springfield, without a state), the API uses the first location that is returned in the list of results.</p>
+                
+                <p>Unfortunately, the location addresses are passed to Google Maps at the same time that the map is created, so there is no way for the API to catch invalid user input until the map is created. However, it is possible for you to build the capability in your program to check user-entered addresses before the map is created. The results returned by Google Maps for an address query can be directly accessed through a “GET” request to <u>https://maps.googleapis.com/maps/api/geocode/json?address=<i>passedAddress</i></u> where <i>passedAddress</i> represents the user-entered address. Therefore, you can write an AJAX request like the one below to validate the user’s input.</p>
+                
+                <p><pre class="prettyprint">var req = new XMLHttpRequest();
+var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+// Assume the user-entered address has been stored in the variable userAddr
+googleUrl = googleUrl + userAddr;
+req.open("GET", googleUrl, true);
+req.addEventListener("load", function() {
+    var googResp = JSON.parse(req.responseText);
+    var results = googResp.results; 
+    if(results.length === 0) {
+        // Notify the user that the address is invalid and ask for a valid address.
+    }
+    else if(results.length === 1) {
+        // All is well. Since you don’t have to do anything in this case, this conditional can be eliminated.
+    }
+    else if(results.length > 1) {
+        // You may need to take a closer look at the results. 
+    }
+});
+req.send(null);</pre></p>
+                
+            <p>For the final conditional, in which more than one result is returned, there are several things you can do. The API will, by default, take the first returned result and use that for the map. So, even if you do nothing, there will still be a location plotted on the map, although it may not be the location that the user intended. Another option is to notify the user that multiple results were returned, and either ask the user to be more specific in the inputted address or display the returned results to the user (<code>results[index].formatted_address</code> would be the most appropriate field to use for display) and ask the user to choose which location to place on the map. However, before going that route, you should be aware of a quirk in the returned results from Google Maps. You can see this quirk if you make the following query for “Sydney,Australia” – <a href="https://maps.googleapis.com/maps/api/geocode/json?address=Sydney,Australia" target="_blank">https://maps.googleapis.com/maps/api/geocode/json?address=Sydney,Australia</a>. In this case, both results have the same value for <code>results[index].formatted_address</code> - Sydney NSW, Australia. Therefore, you may want to give more information about the returned locations to the user, such as the latitude and longitude from the <code>results[index].geometry.location</code> object, or you may want to do an additional check to see if the multiple results all have the same <code>formatted_address</code> value, and, if so, let the program move forward without asking the user for additional input.</p>
+                    
+                <ul class="pagination">
+                    <li><a href="introduction.html">1</a></li>
+                    <li><a href="getting-started.html">2</a></li>
+                    <li><a href="common-tasks.html">3</a></li>
+                    <li><a href="map-display.html">4</a></li>
+                    <li><a href="location.html">5</a></li>
+                    <li><a href="title.html">6</a></li>
+                    <li><a href="descriptive-text.html">7</a></li>
+                    <li><a href="info-link.html">8</a></li>
+                    <li><a href="image.html">9</a></li>
+                    <li><a href="style-selectors.html">10</a></li>
+                    <li class="active"><a href="advanced-topic.html">11</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
