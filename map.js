@@ -73,7 +73,7 @@ function createInfoBox(passedLoc, geocoder) {
     });
 }
 
-if(ggMap_xyz_9753.loadMap) {
+if(ggMap_xyz_9753.loadMap && locs_xyz_9753[0]) {
     var mapCenter = ggMap_xyz_9753.center || locs_xyz_9753[0];
     google.maps.event.addDomListener(window, 'load', initMap(mapCenter.address, ggMap_xyz_9753.zoom, locs_xyz_9753));
 }
