@@ -65,6 +65,10 @@ function loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
     this.getAddress = function() { return this.address; };
     this.infoBox = new infoBox_xyz_9753(title, txt, moreUrl, imgUrl);
     locs_xyz_9753.push(this);
+    this.setMarkerLabel = function(label) { this.infoBox.markerLabel = label; };
+    this.getMarkerLabel = function() { return this.infoBox.markerLabel; };
+    this.setMaxWidth = function(width) { this.infoBox.maxWidth = width; };
+    this.getMaxWidth = function() { return this.infoBox.maxWidth; };
     
     /* Below are set, get, and delete methods for the various fields in the info window */
     // Set, get, and delete methods for the info window title

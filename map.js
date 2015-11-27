@@ -1,4 +1,4 @@
-function initMap(address, zoom) {
+function initMap(address, zoom, locations) {
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': address}, function(results, status) {
         if(!results[0]) {
@@ -13,12 +13,14 @@ function initMap(address, zoom) {
             center: loc,
             zoom: zoom
             });
-        }
+        }    
+        for(var i = 0; i < locations.length; i++) 
+            createInfoBox(locations[i], geocoder);  
     });
 }
 
-function createInfoBox(passedLoc) {
-    var geocoder = new google.maps.Geocoder();
+function createInfoBox(passedLoc, geocoder) {
+    //var geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': passedLoc.address}, function(results, status) {
         if(results[0]) {
             var locCoords = results[0].geometry.location;
@@ -72,12 +74,7 @@ function createInfoBox(passedLoc) {
     });
 }
 
-function envelope() {
+if(ggMap_xyz_9753.loadMap) {
     var mapCenter = ggMap_xyz_9753.center || locs_xyz_9753[0];
-    initMap(mapCenter.address, ggMap_xyz_9753.zoom);
-    for(var i = 0; i < locs_xyz_9753.length; i++)
-        createInfoBox(locs_xyz_9753[i]);
+    google.maps.event.addDomListener(window, 'load', initMap(mapCenter.address, ggMap_xyz_9753.zoom, locs_xyz_9753));
 }
-
-if(ggMap_xyz_9753.loadMap)
-    google.maps.event.addDomListener(window, 'load', envelope());
