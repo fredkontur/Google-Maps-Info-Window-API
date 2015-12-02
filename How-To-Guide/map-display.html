@@ -67,8 +67,8 @@
                         <th>Description</th>
                     </tr>
                     <tr>
-                        <td>setMapCenter(center: location-object)</td>
-                        <td><b>Return:</b> None<br>This function sets the location of the center of the map. Setting the value of the map center is optional. If no value is chosen, the default value is the first location created by the user.</td>
+                        <td>setMapCenter(address: string)</td>
+                        <td><b>Return:</b> None<br>This function sets the location of the center of the map. The address of the location of the map center is passed to the function as a string. Setting the value of the map center is optional. If no value is chosen, the default value is the address of the first location created by the user.</td>
                     </tr>
                     <tr>
                         <td>setMapZoom(zoom: number)</td>
@@ -79,7 +79,7 @@
                     </tr>
                     </tr>
                         <td>getMapCenter()</td>
-                        <td><b>Return:</b> location-object<br>This function returns the current location that is the center of the map.</td>
+                        <td><b>Return:</b> address<br>This function returns the current address for the location that is the center of the map.</td>
                     </tr>
                     </tr>
                         <td>getMapZoom()</td>
