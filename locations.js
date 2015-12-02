@@ -32,38 +32,38 @@ function getLoadMap() {
     return ggMap_xyz_9753.loadMap;
 }
 
-function infoImg_xyz_9753(url) {
+function InfoImg_xyz_9753(url) {
     this.url = url;
     this.width = 300;
     this.order = 3;
 }
 
-function infoTxt_xyz_9753(txt) {
+function InfoTxt_xyz_9753(txt) {
     this.txt = txt;
     this.order = 1;
 }
 
-function infoMore_xyz_9753(url) {
+function InfoMore_xyz_9753(url) {
     this.url = url;
     this.txt = "More information";
     this.newWindow = true;
     this.order = 2;
 }
 
-function infoBox_xyz_9753(title, txt, moreUrl, imgUrl) {
+function InfoBox_xyz_9753(title, txt, moreUrl, imgUrl) {
     this.markerLabel = undefined;
     this.infoTitle = title;
-    this.infoImg = new infoImg_xyz_9753(imgUrl);
-    this.infoTxt = new infoTxt_xyz_9753(txt);
-    this.infoMore = new infoMore_xyz_9753(moreUrl);
+    this.infoImg = new InfoImg_xyz_9753(imgUrl);
+    this.infoTxt = new InfoTxt_xyz_9753(txt);
+    this.infoMore = new InfoMore_xyz_9753(moreUrl);
     this.maxWidth = 325;
 }
 
-function loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
+function Loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
     this.address = address;
     this.setAddress = function(address) { this.address = address; };
     this.getAddress = function() { return this.address; };
-    this.infoBox = new infoBox_xyz_9753(title, txt, moreUrl, imgUrl);
+    this.infoBox = new InfoBox_xyz_9753(title, txt, moreUrl, imgUrl);
     locs_xyz_9753.push(this);
     this.setMarkerLabel = function(label) { this.infoBox.markerLabel = label; };
     this.getMarkerLabel = function() { return this.infoBox.markerLabel; };
@@ -117,7 +117,7 @@ function loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
 }
 
 function addLoc(address, title, txt, moreUrl, imgUrl) {
-    loc = new loc_xyz_9753(address, title, txt, moreUrl, imgUrl);
+    loc = new Loc_xyz_9753(address, title, txt, moreUrl, imgUrl);
     return loc;
 }
 
