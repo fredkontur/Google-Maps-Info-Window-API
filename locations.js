@@ -91,7 +91,7 @@ function Loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
         this.infoBox.infoMore.url = url;
         this.infoBox.infoMore.txt = txt || this.infoBox.infoMore.txt;
         this.infoBox.infoMore.order = order || this.infoBox.infoMore.order;
-        this.infoBox.infoMore.newWindow = this.infoBox.infoMore.newWindow;
+        this.infoBox.infoMore.newWindow = newWindow || this.infoBox.infoMore.newWindow;
     };
     this.setInfoLinkTxt = function(txt) { this.infoBox.infoMore.txt = txt; };
     this.setInfoLinkOrder = function(order) { this.infoBox.infoMore.order = order; };
