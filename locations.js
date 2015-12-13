@@ -84,7 +84,7 @@ function Loc_xyz_9753(address, title, txt, moreUrl, imgUrl) {
     this.setTxtOrder = function(order) { this.infoBox.infoTxt.order = order; };
     this.getTxt = function() { return this.infoBox.infoTxt.txt; };
     this.getTxtOrder = function() { return this.infoBox.infoTxt.order; };
-    this.delTxt = function() { this.infoBox.infoTxt = new infoTxt_xyz_9753(); };
+    this.delTxt = function() { this.infoBox.infoTxt = new InfoTxt_xyz_9753(); };
     
     // Set, get, and delete methods for the additional information link in the info window
     this.setInfoLink = function(url, txt, order, newWindow) {
