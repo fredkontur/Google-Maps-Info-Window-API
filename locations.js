@@ -20,7 +20,7 @@ function setMapZoom(zoom) {
     ggMap_xyz_9753.zoom = zoom;
 }
 
-function getMapZoom(zoom) {
+function getMapZoom() {
     return ggMap_xyz_9753.zoom;
 }
 
